@@ -1,0 +1,19 @@
+.breadcrumbs {
+	padding: 0;
+	border: 0;
+	color: @secondary;
+	
+	a {
+		color: @secondary;
+		text-decoration: underline;
+		
+		&:hover {
+			color: darken(@secondary, 10%);
+		}
+	}
+	
+	* {
+		color: lighten(@secondary, 10%);
+	}
+	
+}

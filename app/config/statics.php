@@ -7,6 +7,6 @@
  */
 
 return array(
-    'customer' => 'Schwachofer',
-    'customer_url' => 'Schwachofer.nl'
+    'customer' => 'ME-Consultancy',
+    'customer_url' => 'me-consultancy.nl'
 );

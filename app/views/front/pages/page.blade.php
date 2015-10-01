@@ -10,11 +10,13 @@
 
 @section('content')
     <ul class="breadcrumbs">
-      <li><a href="/" title="Schwachofer stucadoorsbedrijf">Home</a></li>
+      <li><a href="/" title="ME-Consultancy">Home</a></li>
 	  @if (isset($parent)) 
 		  <li><a href="/{{$parent}}" title="{{$parent}}">{{$parent}}</a></li>
 	  @endif
-      <li class="active">{{ $page->title }}</li>
+	  @if ($page->title != 'Home')
+		<li class="active">{{ $page->title }}</li>
+	  @endif
     </ul>
     {{ $page->content }}
 @stop

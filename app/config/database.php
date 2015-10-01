@@ -55,24 +55,13 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => '127.0.0.1',
-			'database'  => 'schwachofer',
-			'username'  => 'schwachofer_admi',
+			'database'  => 'me-consultancy',
+			'username'  => 'me-admin',
 			'password'  => 't9y9N73YZq',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
 		),
-
-//		'mysql' => array(
-//			'driver'    => 'mysql',
-//			'host'      => '188.166.26.136',
-//			'database'  => 'superstalling',
-//			'username'  => 'forge',
-//			'password'  => 'EKsKV72dH50MVQn5p1da',
-//			'charset'   => 'utf8',
-//			'collation' => 'utf8_unicode_ci',
-//			'prefix'    => '',
-//		),
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',

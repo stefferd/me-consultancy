@@ -7,17 +7,29 @@
 </head>
 <body class="{{$page->title}}">
     <div data-magellan-expedition="fixed" class="sticky-header">
-		<div class="main-wrapper">
-			<div class="logo"></div>
-		</div>
 		<nav class="top-bar" data-topbar role="navigation">
+			<section class="brand">
+				<div class="name">
+					<a href="/" title="ME-Consultancy">
+						ME-Consultancy
+					</a>
+				</div>
+			</section>
 			<section class="top-bar-section">
 				<ul>
 					@foreach($menuitems as $menu)
 						@if (count($menu->children()->get()) > 0)
-							<li class="has-dropdown">
+							@if ($menu->slug == $page->slug)
+								<li class="active has-dropdown">
+							@else
+								<li class="has-dropdown">
+							@endif
 						@else
-							<li>
+							@if ($menu->slug == $page->slug)
+								<li class="active">
+							@else
+								<li>
+							@endif
 						@endif
 							<a href="/{{ $menu->slug }}" title="{{$menu->title}}" class="button">
 								{{$menu->title}}
@@ -41,17 +53,7 @@
 	</div>
     <section class="hero">
         <div class="row">
-            <div class="large-6 columns about-box">
-                <div class="black-box">
-                    <h2>Al uw stucadoorwerken</h2>
-                    <p><strong>Specialisaties:</strong><br />
-                        Sierpleisters, restauraties, renovaties,<br />
-                        gipslijsten & ornamenten
-                    </p>
-                    <p>Interesse neem dan contact op!</p>
-                    <a href="#" class="secondary small button">Direct contact →</a>
-                </div>
-            </div>
+            <div class="slogan">{{$slogan->value}}</div>
         </div>
     </section>
     @if ($page->title == 'Home')
